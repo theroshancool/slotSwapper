@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS tenants;
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tenants (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid()
+  project_id UUID,  
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  better_auth_id VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE  memberships (
+  id SERIAL PRIMARY KEY,
+  user_id   UUID REFERENCES users(id) ON DELETE CASCADE,
+  tenant_id UUID REFERENCES tenants(id) ON DELETE CASCADE,
+  role      VARCHAR(50) NOT NULL,
+  status    VARCHAR(20) DEFAULT 'active',
+  UNIQUE (user_id, tenant_id)
+);
