@@ -111,7 +111,7 @@ ACCESS_SECRET=your_jwt_secret_key
 
 ```bash
 # 1️⃣ Clone the repository
-git clone https://github.com/<your-username>/SlotSwapper.git
+git clone https://github.com/theroshancool/slotSwapper.git
 
 # 2️⃣ Move into the project directory
 cd SlotSwapper
@@ -171,3 +171,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 ---
 
 Would you like me to add a short **“About Me for Recruiters”** section (like your previous project — e.g., 2–3 lines about you and your profile link)? It gives a personal touch for internship submissions.
+
