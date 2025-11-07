@@ -129,6 +129,9 @@ Server runs at → `http://localhost:5000`
 
 ---
 
+Post man collection
+https://web.postman.co/workspace/My-Workspace~e552cbc4-ae57-4707-8e39-276d34355d9e/collection/23047579-138d00c4-96cb-4ba6-a313-7d8611373607?action=share&source=copy-link&creator=23047579
+
 ### 💡 Developer Notes
 
 > I developed **SlotSwapper** to showcase my backend skills in **API design, authentication, and transactional logic**.
@@ -171,4 +174,5 @@ This project is open-source and available under the [MIT License](LICENSE).
 ---
 
 Would you like me to add a short **“About Me for Recruiters”** section (like your previous project — e.g., 2–3 lines about you and your profile link)? It gives a personal touch for internship submissions.
+
 
